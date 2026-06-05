@@ -1,15 +1,6 @@
 # ai-skills
 
-Personal collection of agent skills and commands for AI coding assistants (Claude Code, OpenCode, Cursor, etc.).
-
-## Structure
-
-```
-skills/
-  <skill-name>/
-    SKILL.md          # Skill definition (frontmatter + workflow)
-    scripts/          # Optional executable helpers
-```
+Personal collection of agent skills and commands for AI coding assistants (Claude Code, OpenCode, Codex, etc.).
 
 ## Skills
 
@@ -19,21 +10,28 @@ skills/
 
 ## Installation
 
-### Claude Code
+Run the install script to copy all skills to your preferred platform:
 
 ```bash
-cp -r skills/<skill-name> ~/.claude/skills/
+./install.sh <target>
 ```
 
-### OpenCode
+**Targets:**
 
-Skills are discovered automatically when this repo is the workspace, or copy to `~/.config/opencode/skills/`.
+| Target | Installs to |
+|--------|-------------|
+| `claude` | `~/.claude/skills/` |
+| `codex` | `~/.codex/skills/` |
+| `opencode` | `~/.config/opencode/skills/` |
+| `all` | All of the above |
+
+**Examples:**
+
+```bash
+./install.sh all        # install everywhere
+./install.sh claude     # Claude Code only
+```
 
 ### claude.ai
 
 Paste the `SKILL.md` contents into project knowledge or the conversation.
-
-## Roadmap
-
-- Package skills as Claude plugins (`claude plugin`)
-- Add more skills as they're extracted from daily work
