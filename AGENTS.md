@@ -37,6 +37,12 @@ description: One-sentence description of what the skill does.
 - ...
 ```
 
+## README Rules
+
+- Do NOT store repository structure, directory layouts, or file trees in `README.md`
+- `README.md` must contain only: project description, the skills table, and installation instructions
+- Every new skill MUST be added to the skills table in `README.md`
+
 ## What Not to Do
 
 - Do not commit secrets, tokens, or credentials
